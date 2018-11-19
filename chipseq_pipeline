@@ -15,21 +15,24 @@ CHIPLOC=$7
 INPUTLOC=$8
 
 ##Lectura de parámetros
-WD=$(grep working_directory: $PARAMS | awk {‘print $2’}
+WD=$(grep working_directory: $PARAMS | awk '{ print $2}')
+echo $WD
+MAIN_FOLDER=$(grep main_folder: $PARAMS | awk '{print $2}')
+echo $MAIN_FOLDER
+GEN=$(grep genome_folder: $PARAMS | awk '{print $2}')
+echo $GEN
+ANNO=$(grep annotation_folder: $PARAMS | awk '{print $2}')
+echo $ANNO
+INS=$(grep installation_folder: $PARAMS | awk '{print $2}')
+echo "installation_folder:"
+echo $INS
+CHIPLOC=$(grep chip_location: $PARAMS | awk '{print $2}')
+echo $CHIPLOC
+INPUTLOC=$(grep input_location: $PARAMS | awk '{print $2}')
+echo $INPUTLOC
 
-MAIN_FOLDER=$(grep main_folder: $PARAMS | awk {‘print $2’}
+##Construccion working directory
 
-GEN=$(grep genome_folder: $PARAMS | awk {‘print $2’}
-
-ANNO=$(grep annotation_folder: $PARAMS | awk {‘print $2’}
-
-INS=$(grep installation_folder: $PARAMS | awk {‘print $2’}
-
-CHIPLOC=$(grep chip_location: $PARAMS | awk {‘print $2’}
-
-INPUTLOC=$(grep input_location: $PARAMS | awk {‘print $2’}
-
-#Construccion working directory
 cd $WD
 
 ##create main folder
@@ -46,11 +49,11 @@ cd samples
 mkdir chip input
 cd ../genome
 cp $GEN genome.fa
-bowtie_build genome.fa index
+bowtie-build genome.fa index
 cd ../annotation
 cp $ANNO annotation.gtf
 
 ##Mapeo de lecturas al genoma de referencia
 qsub -N chip -o chip $INS/read_mapping.sh $WD/$MAIN_FOLDER/samples/chip $CHIPLOC
-qsub -N input -o input $INS/read_mapping.sh$WD/$MAIN_FOLDER/samples/input $INPUTLOC
+qsub -N input -o input $INS/read_mapping.sh $WD/$MAIN_FOLDER/samples/input $INPUTLOC
 
