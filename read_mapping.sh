@@ -7,6 +7,7 @@
 SAMPLE_DIR=$1
 SAMPLE_FILE=$2
 SAMPLE_TYPE=$3
+SAMPLES_DONE=$4
 
 #
 cd ${SAMPLE_DIR}
@@ -34,7 +35,7 @@ SAMPLES_DONE=$(wc -l ../../log/blackboard | awk '{print $1}')
 
 if [$SAMPLES_DONE -eq 2]
 then 
-        qsub -N peak_calling -o peak_calling  $INS/peak_calling.sh $WD/$MAIN_FOLDER/results
+        qsub -N peak_calling -o peak_calling  $INS/peak_calling.sh $WD/$MAIN_FOLDER/results 
 fi
 
 

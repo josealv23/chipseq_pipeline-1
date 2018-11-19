@@ -42,7 +42,7 @@ cd ${MAIN_FOLDER}
 
 
 ## Create subfolders
-mkdir genome annotation results samples
+mkdir genome annotation results samples log
 
 ##Create chip e input
 cd samples
@@ -54,6 +54,6 @@ cd ../annotation
 cp $ANNO annotation.gtf
 
 ##Mapeo de lecturas al genoma de referencia
-qsub -N chip -o chip $INS/read_mapping.sh $WD/$MAIN_FOLDER/samples/chip $CHIPLOC
-qsub -N input -o input $INS/read_mapping.sh $WD/$MAIN_FOLDER/samples/input $INPUTLOC
+qsub -N chip -o chip $INS/read_mapping.sh $WD/$MAIN_FOLDER/samples/chip $CHIPLOC chip
+qsub -N input -o input $INS/read_mapping.sh $WD/$MAIN_FOLDER/samples/input $INPUTLOC input
 
