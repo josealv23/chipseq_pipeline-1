@@ -3,6 +3,7 @@
 **Description**
 
 **Installation and dependencies**
+
 FastaQC - FastQC gives general quality metrics about your reads. It provides information about the quality score distribution across your reads, the per base sequence content (%T/A/G/C). You get information about adapter contamination and other overrepresented sequences.
 www.bioinformatics.babraham.ac.uk/projects/fastqc/
 
