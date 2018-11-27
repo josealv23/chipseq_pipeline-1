@@ -25,7 +25,7 @@ SGE - [http://genomics.princeton.edu/support/grids/sge.shtml]
 
 We recommend using BASH to run pipelines.
 
-`bash <chipseq pipeline> <params file>`
+`bash <chipseq_pipeline> <params.txt>`
 
 **Params:**
 
