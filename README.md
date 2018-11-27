@@ -5,7 +5,7 @@
 **Installation and dependencies**
 
 FastaQC - FastQC gives general quality metrics about your reads. It provides information about the quality score distribution across your reads, the per base sequence content (%T/A/G/C). You get information about adapter contamination and other overrepresented sequences.
-[www.bioinformatics.babraham.ac.uk/projects/fastqc/] (Get it here)
+[www.bioinformatics.babraham.ac.uk/projects/fastqc/](Get it here)
 
 Bowtie - 
 
@@ -29,14 +29,21 @@ We recommend using BASH to run pipelines.
 
 **Params:**
 
-working_directory: /home/bag1/temp
+working_directory: 
+
 main_folder:  prr5_samples
-genome_folder: /home/bag1/prr5_samples/genome/chromosome1.fa
-annotation_folder: /home/bag1/prr5_samples/annotation/chromosome1.gtf
-installation_folder: /home/bag1/opt/chipseq_pipeline
-chip_location: /home/bag1/prr5_samples/samples/chip/chip_prr5_chr1.fastq
-input_location: /home/bag1/prr5_samples/samples/input/input_prr5_chr1.fastq
-output.file: /fran/bag1/prr5_samples/results/prr5_target_genes.txt
+
+genome_folder: location of the file.fa containing the genome
+
+annotation_folder: location of the file.gtf containing the genome
+
+installation_folder: 
+
+chip_location: location of the fastq file 
+
+input_location: location of the fastq file 
+
+output.file: location of the output file with the result of target genes 
 
 **Example**
 
