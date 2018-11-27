@@ -27,6 +27,10 @@ We recommend using BASH to run pipelines.
 
 `bash <chipseq_pipeline> <params.txt>`
 
+We also recommend to copy the folder "Scripts" containing Java.jar into the installation folder
+
+`cp <file location> <installation folder>`
+
 **Params:**
 
 working_directory: 
