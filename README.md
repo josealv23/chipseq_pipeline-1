@@ -10,7 +10,8 @@ FastaQC - FastQC gives general quality metrics about your reads. It provides in
 Bowtie - 
 
 Macs - MACS, or Model-based Analysis of ChIP-Seq, is used for capturing the enriched regions of sequence reads. It takes the influence of genome complexity into consideration, and improves the spatial resolution of binding sites through combining the information of both sequencing tag position and orientation.
-[liulab.dfci.harvard.edu/MACS/] (Get it here)
+
+[liulab.dfci.harvard.edu/MACS/]
 
 PeakAnnotator - [https://www.ebi.ac.uk/research/bertone/software]
 
