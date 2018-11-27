@@ -5,27 +5,27 @@
 **Installation and dependencies**
 
 FastaQC - FastQC gives general quality metrics about your reads. It provides information about the quality score distribution across your reads, the per base sequence content (%T/A/G/C). You get information about adapter contamination and other overrepresented sequences.
-www.bioinformatics.babraham.ac.uk/projects/fastqc/
+[www.bioinformatics.babraham.ac.uk/projects/fastqc/] (Get it here)
 
 Bowtie - 
 
 Macs - MACS, or Model-based Analysis of ChIP-Seq, is used for capturing the enriched regions of sequence reads. It takes the influence of genome complexity into consideration, and improves the spatial resolution of binding sites through combining the information of both sequencing tag position and orientation.
-liulab.dfci.harvard.edu/MACS/
+[liulab.dfci.harvard.edu/MACS/] (Get it here)
 
-PeakAnnotator - https://www.ebi.ac.uk/research/bertone/software
+PeakAnnotator - [https://www.ebi.ac.uk/research/bertone/software] (Get it here)
 
-R and Rscript - https://stat.ethz.ch/R-manual/R-devel/library/utils/html/Rscript.html
+R and Rscript - [https://stat.ethz.ch/R-manual/R-devel/library/utils/html/Rscript.html] (Get it here)
 
 Java.jar -
 
-SGE - http://genomics.princeton.edu/support/grids/sge.shtml
+SGE - [http://genomics.princeton.edu/support/grids/sge.shtml] (Get it here)
 
 
 **Usage**
 
 We recommend using BASH to run pipelines.
 
-bash <chipseq pipeline> <params file>
+`bash <chipseq pipeline> <params file>`
 
 **Params:**
 
