@@ -1,6 +1,7 @@
 #**ChipSeq pipeline**#
 
 **Description**
+ChIP-seq is a method used to analyze protein interactions with DNA. ChIP-seq combines chromatin immunoprecipitation with DNA sequencing to infer the possible binding sites of DNA-associated proteins.
 
 **Installation and dependencies**
 
