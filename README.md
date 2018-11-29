@@ -28,25 +28,25 @@ We recommend using BASH to run pipelines.
 
 `bash <chipseq_pipeline> <params.txt>`
 
-We also recommend to copy the folder "Scripts" containing Java.jar into the installation folder
+We also recommend copying the folder "Scripts" containing Java.jar into the installation folder
 
 `cp <file location> <installation folder>`
 
 **Params:**
 
-working_directory: 
+working_directory: location where the main folder is going to be created. 
 
-main_folder:  prr5_samples
+main_folder:  name the main folder
 
 genome_folder: location of the file.fa containing the genome
 
 annotation_folder: location of the file.gtf containing the genome
 
-installation_folder: 
+installation_folder: location of the chipseq pipeline
 
-chip_location: location of the fastq file 
+chip_location: location of the fastq file - chip
 
-input_location: location of the fastq file 
+input_location: location of the fastq file - input
 
 output.file: location of the output file with the result of target genes 
 
