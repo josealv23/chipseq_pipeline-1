@@ -40,6 +40,8 @@ We also recommend copying the folder "Scripts" containing Java.jar into the inst
 
 `cp <file location> <installation folder>`
 
+
+
 The following is a list of files provided with your ChIP-Seq analysis:
 
 
