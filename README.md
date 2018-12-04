@@ -42,14 +42,23 @@ We also recommend copying the folder "Scripts" containing Java.jar into the inst
 
 The following is a list of files provided with your ChIP-Seq analysis:
 
+
 Raw unprocessed gzipped FASTQ files
+
 FASTQC report with basic sequencing quality statistics
+
 Mapped BAM files (sorted -> low-qual filtered -> duplicates removed)
+
 Wiggle and BigWig tracks
+
 ChIP-Seq quality measures (phantompeakqualtools)
+
 HOMER generated analysis output files
+
 MACS2 generated analysis output files
+
 Peak annotations
+
 
 **Params:**
 
