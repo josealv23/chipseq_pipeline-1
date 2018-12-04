@@ -6,13 +6,7 @@ echo "I like coding"
 
 ##Parámetros de entrada
 PARAMS=$1
-WD=$2
-MAIN_FOLDER=$3
-GEN=$4
-ANNO=$5
-INS=$6
-CHIPLOC=$7
-INPUTLOC=$8
+
 
 ##Lectura de parámetros
 WD=$(grep working_directory: $PARAMS | awk '{ print $2}')
@@ -24,12 +18,20 @@ echo $GEN
 ANNO=$(grep annotation_folder: $PARAMS | awk '{print $2}')
 echo $ANNO
 INS=$(grep installation_folder: $PARAMS | awk '{print $2}')
-echo "installation_folder:"
 echo $INS
 CHIPLOC=$(grep chip_location: $PARAMS | awk '{print $2}')
 echo $CHIPLOC
 INPUTLOC=$(grep input_location: $PARAMS | awk '{print $2}')
 echo $INPUTLOC
+OUTPUT=$(grep output.file: $PARAMS | awk '{ print $2 }')
+echo $OUTPUT
+RES=$(grep results_folder: $PARAMS | awk '{ print $2 }')
+echo $RES
+NDG=$(grep ndg.file: $PARAMS | awk '{ print $2 }')
+echo $NDG
+OVERLAP=$(grep overlap.file: $PARAMS | awk '{ print $2 }')
+echo $OVERLAP
+
 
 ##Construccion working directory
 
@@ -39,7 +41,6 @@ cd $WD
 
 mkdir ${MAIN_FOLDER}
 cd ${MAIN_FOLDER}
-
 
 ## Create subfolders
 mkdir genome annotation results samples log
@@ -54,6 +55,10 @@ cd ../annotation
 cp $ANNO annotation.gtf
 
 ##Mapeo de lecturas al genoma de referencia
-qsub -N chip -o chip $INS/read_mapping.sh $WD/$MAIN_FOLDER/samples/chip $CHIPLOC chip
-qsub -N input -o input $INS/read_mapping.sh $WD/$MAIN_FOLDER/samples/input $INPUTLOC input
+qsub -N chip -o chip $INS/read_mapping.sh $WD/$MAIN_FOLDER/samples/chip $CHIPLOC chip $OUTPUT $WD/$MAIN_FOLDER ${WD} $INS $NDG $OVERLAP
+qsub -N input -o input $INS/read_mapping.sh $WD/$MAIN_FOLDER/samples/input $INPUTLOC input $OUTPUT $WD/$MAIN_FOLDER ${WD} $INS $NDG $OVERLAP
+
+
+
+
 
