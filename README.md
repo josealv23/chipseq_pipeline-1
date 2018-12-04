@@ -15,20 +15,19 @@ For the properly usage of this pipeline, you will need to install some dependenc
 
 **You will need to install:**
 
-FastaQC - FastQC gives general quality metrics about your reads. It provides information about the quality score distribution across your reads, the per base sequence content (%T/A/G/C). You get information about adapter contamination and other overrepresented sequences.
-[www.bioinformatics.babraham.ac.uk/projects/fastqc/]
 
-Bowtie - Bowtie is an ultrafast, memory-efficient short read aligner. It aligns short DNA sequences (reads) to the human genome at a rate of over 25 million 35-bp reads per hour. Bowtie indexes the genome with an FM index to keep its memory footprint small: typically about 2.2 GB for the human genome (2.9 GB for paired-end). [https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.2.2]
+[FastaQC](www.bioinformatics.babraham.ac.uk/projects/fastqc/) - FastQC gives general quality metrics about your reads. It provides information about the quality score distribution across your reads, the per base sequence content (%T/A/G/C). You get information about adapter contamination and other overrepresented sequences.
 
-Macs - MACS, or Model-based Analysis of ChIP-Seq, is used for capturing the enriched regions of sequence reads. It takes the influence of genome complexity into consideration, and improves the spatial resolution of binding sites through combining the information of both sequencing tag position and orientation.
-[https://github.com/taoliu/MACS]
+[Bowtie](https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.2.2) - Bowtie is an ultrafast, memory-efficient short read aligner. It aligns short DNA sequences (reads) to the human genome at a rate of over 25 million 35-bp reads per hour. Bowtie indexes the genome with an FM index to keep its memory footprint small: typically about 2.2 GB for the human genome (2.9 GB for paired-end).
 
-PeakAnnotator - Assist in annotation of genome-wide signal enrichment peaks derived from experimental results. PeakAnnotator couples a modified version of the nested containment list (NCList) algorithm to a binary search for determining functional elements proximal to peak loci. It integrates three subroutines: Nearest Downstream Gene (NDG), Transcription Start Site (TSS) and Overlap Data Sets (ODS). The software is a part of the PeakAnalyzer software.
-[https://www.ebi.ac.uk/research/bertone/software]
+[Macs](https://github.com/taoliu/MACS) - MACS, or Model-based Analysis of ChIP-Seq, is used for capturing the enriched regions of sequence reads. It takes the influence of genome complexity into consideration, and improves the spatial resolution of binding sites through combining the information of both sequencing tag position and orientation.
 
-R and Rscript - [https://stat.ethz.ch/R-manual/R-devel/library/utils/html/Rscript.html]
+[PeakAnnotator](https://www.ebi.ac.uk/research/bertone/software) - Assist in annotation of genome-wide signal enrichment peaks derived from experimental results. PeakAnnotator couples a modified version of the nested containment list (NCList) algorithm to a binary search for determining functional elements proximal to peak loci. It integrates three subroutines: Nearest Downstream Gene (NDG), Transcription Start Site (TSS) and Overlap Data Sets (ODS). The software is a part of the PeakAnalyzer software.
 
-SGE - SGE, Sun Grid Engine, is an open source distributed computing management system. It is through SGE commands that jobs are submitted, monitored, deleted, and otherwise managed. In order for SGE to work properly, the SGE_ROOT environment variable must be set appropriately for the cluster you are using. [http://genomics.princeton.edu/support/grids/sge.shtml]
+
+[R and Rscript](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/Rscript.html)
+
+[SGE](http://genomics.princeton.edu/support/grids/sge.shtml) - SGE, Sun Grid Engine, is an open source distributed computing management system. It is through SGE commands that jobs are submitted, monitored, deleted, and otherwise managed. In order for SGE to work properly, the SGE_ROOT environment variable must be set appropriately for the cluster you are using. 
 
 
 **Usage**
