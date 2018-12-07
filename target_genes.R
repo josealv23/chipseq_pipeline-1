@@ -1,7 +1,7 @@
-ndg.file <- "/home/fran/prr5_samples/results/prr5/prr5_summits.ndg.bed"
-overlap.file <- "/home/fran/prr5_samples/results/prr5/prr5_summits.overlap.bed"
-output.file <- "/home/fran/prr5_samples/results/prr5_target_genes.txt"
-
+args <- commandArgs(trailingOnly=TRUE)
+overlap.file <- args[1]
+ndg.file <- args[2]
+output.file <- args [3]
 
 get.first <- function(elto)
 {
@@ -25,7 +25,7 @@ ndg.fw.genes <- as.vector(fw.genes[peaks.ndg[["X.Overlaped_Genes"]] == 0 &
                           (peaks.ndg[["Distance"]] < peaks.ndg[["Distance.1"]]) & 
                           (peaks.ndg[["Distance"]] < 2000)])
 ndg.rv.genes <- as.vector(rv.genes[peaks.ndg[["X.Overlaped_Genes"]] == 0 & 
-                         (peaks.ndg[["Distance_fw"]] > peaks.ndg[["Distance.1"]]) & 
+                         (peaks.ndg[["Distance"]] > peaks.ndg[["Distance.1"]]) & 
                          (peaks.ndg[["Distance.1"]] < 2000)]) 
 
 ndg.genes <- c(ndg.fw.genes,ndg.rv.genes)
