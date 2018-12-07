@@ -3,7 +3,7 @@
 ## **Description**
 ChIP-seq is a method used to analyze protein interactions with DNA. ChIP-seq combines chromatin immunoprecipitation (ChIP) with DNA sequencing (seq) to infer the possible binding sites of DNA-associated proteins.
 
-This pipeline takes as entry two samples - chip (study group) and input (control group) -, a genome and a series of parameters and returns a list of targetted genes in '.txt' format, as well as a chart with peaks in '.xls' and four '.bed' files.
+This pipeline takes as entry a genome, two samples - chip (study group) and input (control group) - and a series of parameters, and returns a list of targetted genes in '.txt' format, as well as a chart with peaks in '.xls' and four '.bed' files.
 
 ## **Installation and dependencies**
 
@@ -15,7 +15,7 @@ For the properly usage of this pipeline, you will need to install some dependenc
 
 ### **You will need to install:**
 
-- [FastaQC](www.bioinformatics.babraham.ac.uk/projects/fastqc/) - FastQC gives general quality metrics about your reads. It provides information about the quality score distribution across your reads, the per base sequence content (%T/A/G/C). You get information about adapter contamination and other overrepresented sequences.
+- [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) - FastQC gives general quality metrics about your reads. It provides information about the quality score distribution across your reads, the per base sequence content (%T/A/G/C). You get information about adapter contamination and other overrepresented sequences.
 
 - [Bowtie](https://sourceforge.net/projects/bowtie-bio/files/bowtie/1.2.2) - Bowtie is an ultrafast, memory-efficient short read aligner. It aligns short DNA sequences (reads) to the human genome at a rate of over 25 million 35-bp reads per hour. Bowtie indexes the genome with an FM index to keep its memory footprint small: typically about 2.2 GB for the human genome (2.9 GB for paired-end).
 
@@ -23,17 +23,17 @@ For the properly usage of this pipeline, you will need to install some dependenc
 
 - [PeakAnnotator](https://www.ebi.ac.uk/research/bertone/software) - Assist in annotation of genome-wide signal enrichment peaks derived from experimental results. PeakAnnotator couples a modified version of the nested containment list (NCList) algorithm to a binary search for determining functional elements proximal to peak loci. It integrates three subroutines: Nearest Downstream Gene (NDG), Transcription Start Site (TSS) and Overlap Data Sets (ODS). The software is a part of the PeakAnalyzer software.
 
-- [R and Rscript](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/Rscript.html)
+- [R and Rscript](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/Rscript.html) - R is an open source free software environment for statistical computing and graphics. Rscript is the R package that is offered for scripting front-end for R, to be used in #! scripts and other scripting applications.
 
 - [SGE](http://genomics.princeton.edu/support/grids/sge.shtml) - SGE, Sun Grid Engine, is an open source distributed computing management system. It is through SGE commands that jobs are submitted, monitored, deleted, and otherwise managed. In order for SGE to work properly, the SGE_ROOT environment variable must be set appropriately for the cluster you are using. 
 
 ## **Usage**
 
-We recommend using BASH to run pipelines.
+We recommend using BASH to run this pipeline.
 
 `bash <chipseq_pipeline> <params.txt>`
 
-We also recommend copying the folder "Scripts" containing Java.jar into the installation folder
+We also recommend copying the folder "Scripts" containing Java.jar into the installation folder. This is mandatory unless you modify the routing in the respective scripts. If you haven't modified it, performing the copy as follows will work perfectly
 
 `cp <file location> <installation folder>`
 
@@ -60,6 +60,9 @@ The following is a list of files provided with your ChIP-Seq analysis:
 
 ## **Params:**
 
+The 'params.txt' file is the only parameter the chipseq-pipeline main script takes, and it contains key information for the good performance of the process. It should look like this:
+
+```
 working_directory: <location where the main folder is going to be created> 
 
 main_folder:  <main folder name>
@@ -73,6 +76,7 @@ installation_folder: <location of the chipseq pipeline main script and the rest 
 chip_location: <location of the fastq file - chip sample>
 
 input_location: <location of the fastq file - input sample (control sample)>
+```
 
 ## **Example**
 
