@@ -1,11 +1,7 @@
-working_directory: /home/bag1/temp
-main_folder: prr5_samples
-genome_folder: /home/bag1/prr5_samples/genome/chromosome1.fa
-annotation_folder: /home/bag1/prr5_samples/annotation/chromosome1.gtf
-installation_folder: /home/bag1/opt/chipseq_pipeline
-chip_location: /home/bag1/prr5_samples/samples/chip/chip_prr5_chr1.fastq
-input_location: /home/bag1/prr5_samples/samples/input/input_prr5_chr1.fastq
-ndg.file: /home/bag1/temp/prr5_samples/results/prr5_summits.ndg.bed
-overlap.file: /home/bag1/temp/prr5_samples/results/prr5_summits.overlap.bed
-output.file: /home/bag1/temp/prr5_samples/results/prr5_target_genes.txt
-results_folder: /home/bag1/temp/prr5_samples/results
+working_directory: <location where the main folder is going to be created> 
+main_folder:  <main folder name>
+genome_folder: <location of the fasta file containing the genome>
+annotation_folder: <location of the '.gtf' file containing the genome annotation>
+installation_folder: <location of the chipseq pipeline main script and the rest of scripts>
+chip_location: <location of the fastq file - chip sample (study sample)>
+input_location: <location of the fastq file - input sample (control sample)>
